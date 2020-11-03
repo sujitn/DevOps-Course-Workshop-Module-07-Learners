@@ -14,9 +14,15 @@ jobs:
     - run: dotnet build
     - run: dotnet test
     
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1    
       with:
         node-version: '14'
-      working-directory: ./DotnetTemplate.Web
+      
     - run: npm install
+      working-directory: ./DotnetTemplate.Web
+
     - run: npm run build
+      working-directory: ./DotnetTemplate.Web
+      
+    - run: npm run lint
+      working-directory: ./DotnetTemplate.Web
