@@ -18,10 +18,13 @@ jobs:
       with:
         node-version: '14'
       
-    - run: npm install
+    - run: npm ci
       working-directory: ./DotnetTemplate.Web
 
     - run: npm run build
+      working-directory: ./DotnetTemplate.Web
+      
+    - run: npm t
       working-directory: ./DotnetTemplate.Web
       
     - run: npm run lint
