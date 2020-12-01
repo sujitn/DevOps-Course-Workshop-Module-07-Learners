@@ -29,3 +29,9 @@ jobs:
       
     - run: npm run lint
       working-directory: ./DotnetTemplate.Web
+      
+    - uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: snair79/dotnettemplate
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
