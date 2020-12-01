@@ -35,3 +35,9 @@ jobs:
         name: snair79/dotnettemplate
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        
+    - uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "sleepy-dusk-98543" #Must be unique in Heroku
+          heroku_email: "sujitnair@msn.com"
