@@ -41,5 +41,5 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: 'sleepy-dusk-98543'
         heroku_email: 'sujitnair@msn.com'
-        usedocker:true
-        dontuseforce:true
+        usedocker: true
+        dontuseforce: false
